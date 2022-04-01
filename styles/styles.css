@@ -302,19 +302,6 @@ input, button, textarea, select {
   margin: 0 auto;
 }
 
-button {
-  font-family: "Allerta", sans-serif;
-  font-size: 1rem;
-  color: #FFF;
-  border: none;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-button.searchButton {
-  background-color: #4169E1;
-}
-
 html {
   background-color: #1E90FF;
 }
@@ -352,4 +339,17 @@ p {
 
 p.plot {
   font-size: 1rem;
+}
+
+button {
+  font-family: "Allerta", sans-serif;
+  font-size: 1rem;
+  color: #FFF;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+button.searchButton {
+  background-color: #4169E1;
 }

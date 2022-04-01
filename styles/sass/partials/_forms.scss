@@ -1,0 +1,15 @@
+button {
+    // button text styling
+    font-family: $emphasizeFont, sans-serif;
+    font-size: 1rem;
+    color: $solidWhite;
+    // button dim and border
+    border: none;
+    border-radius: 10px;
+    // effect
+    cursor: pointer;
+    &.searchButton {
+        background-color: $secondaryColorL;
+
+    }
+}

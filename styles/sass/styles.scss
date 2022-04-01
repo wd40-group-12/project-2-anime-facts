@@ -1,5 +1,15 @@
+// Foundation partials
 @import "./partials/setup";
 @import "./partials/variables";
 @import "./partials/baseStyles";
 @import "./partials/typography";
 @import "./partials/animations";
+
+// Primary partials
+@import "./partials/header";
+@import "./partials/footer";
+
+@import "./partials/forms";
+
+// Media queries
+@import "./partials/mediaQueries";

@@ -1,0 +1,21 @@
+.wrapper {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+button {
+    // button text styling
+    font-family: $emphasizeFont, sans-serif;
+    font-size: 1rem;
+    color: $solidWhite;
+    // button dim and border
+    border: none;
+    border-radius: 10px;
+    // effect
+    cursor: pointer;
+    &.searchButton {
+        background-color: $secondaryL;
+
+    }
+}

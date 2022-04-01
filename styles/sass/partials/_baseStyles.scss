@@ -15,7 +15,11 @@ button {
     // effect
     cursor: pointer;
     &.searchButton {
-        background-color: $secondaryL;
+        background-color: $secondaryColorL;
 
     }
+}
+
+html {
+    background-color: $primaryColorL;
 }

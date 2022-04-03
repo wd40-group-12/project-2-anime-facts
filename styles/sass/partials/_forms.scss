@@ -8,8 +8,37 @@ button {
     border-radius: 10px;
     // effect
     cursor: pointer;
-    &.searchButton {
-        background-color: $secondaryColorL;
+    background-color: $primaryColorL;
+    
+    // animations 
+    transition: 0.3s;
 
+    &:hover,
+    &:focus {
+        background-color: $secondaryColorL;
+    }
+    
+}
+
+form {
+    
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    input {
+        padding: 5px 10px;
+        width: 100%;
+        border: 2px solid $primaryColorL;
+        border-radius: 25px;
+    }
+
+    button {
+        width: 20%;
+        border-radius: 25px;
+        position: absolute;
+        right: 0;
+        // same height as the input - found it using the inspector tool
+        min-height: 51px;
     }
 }

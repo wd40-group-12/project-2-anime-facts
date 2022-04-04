@@ -376,6 +376,7 @@ h3 {
 
 p {
   line-height: 1.5rem;
+  letter-spacing: 0.05rem;
   margin: 0 0 10px 0;
 }
 
@@ -385,7 +386,7 @@ p.plot {
 
 p.gridItem {
   font-size: 0.75rem;
-  line-height: 3rem;
+  line-height: 2rem;
 }
 
 ul {
@@ -403,6 +404,13 @@ a {
 a.developer {
   font-family: "Allerta", sans-serif;
   font-size: 0.8rem;
+}
+
+a.developer:hover, a.developer:focus {
+  display: inline-block;
+  color: #000;
+  -webkit-transform: translateY(-0.25rem);
+          transform: translateY(-0.25rem);
 }
 
 header {
@@ -474,6 +482,10 @@ footer .footerGridContainer {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
+  justify-items: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 footer .footerGridContainer .gridItem1 {
@@ -495,7 +507,5 @@ footer .footerGridContainer .gridItem3 {
 }
 
 footer .footerGridContainer .gridItem {
-  -ms-grid-column-align: center;
-      justify-self: center;
   margin: 0;
 }

@@ -8,6 +8,8 @@ footer {
     .footerGridContainer {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        justify-items: center;
+        align-items: flex-end;
         .gridItem1 {
             grid-column: 1 / -1;
         }
@@ -18,7 +20,6 @@ footer {
             grid-area: 2 / 2 / 3 / -1;
         }
         .gridItem {
-            justify-self: center;
             margin: 0;
         }
     }

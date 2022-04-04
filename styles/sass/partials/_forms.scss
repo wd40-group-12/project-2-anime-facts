@@ -1,25 +1,3 @@
-button {
-    // button text styling
-    font-family: $emphasizeFont, sans-serif;
-    font-size: 1rem;
-    color: $solidWhite;
-    // button dim and border
-    border: none;
-    border-radius: 10px;
-    // effect
-    cursor: pointer;
-    background-color: $primaryColorL;
-    
-    // animations 
-    transition: 0.3s;
-
-    &:hover,
-    &:focus {
-        background-color: $secondaryColorL;
-    }
-    
-}
-
 form {
     
     display: flex;
@@ -32,13 +10,5 @@ form {
         border: 2px solid $primaryColorL;
         border-radius: 25px;
     }
-
-    button {
-        width: 20%;
-        border-radius: 25px;
-        position: absolute;
-        right: 0;
-        // same height as the input - found it using the inspector tool
-        min-height: 51px;
-    }
+    
 }

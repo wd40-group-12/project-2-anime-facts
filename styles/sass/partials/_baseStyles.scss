@@ -1,11 +1,49 @@
+
+html {
+    background-color: $solidWhite;
+}
+
 .wrapper {
     max-width: 1260px;
     width: 90%;
     margin: 0 auto;
+    display: inherit;
 }
 
+button {
+    // button text styling
+    font-family: $emphasizeFont, sans-serif;
+    font-size: 1rem;
+    color: $solidWhite;
+    // button dim and border
+    border: none;
+    border-radius: 10px;
+    // effect
+    cursor: pointer;
+    background-color: $primaryColorL;
+    
+    // animations 
+    transition: 0.3s;
 
-
-html {
-    background-color: $solidWhite;
+    &:hover,
+    &:focus {
+        background-color: $secondaryColorL;
+    }
+    &.themeToggle {
+        letter-spacing: 0.2rem;
+        padding: 0 10px 0 10px;
+        &:hover,
+        &:focus {
+            color: $solidBlack;
+            background-color: $primaryColorD;
+        }
+    }
+    &.searchButton {
+        width: 20%;
+        border-radius: 25px;
+        position: absolute;
+        right: 0;
+        // same height as the input - found it using the inspector tool
+        min-height: 51px;
+    } 
 }

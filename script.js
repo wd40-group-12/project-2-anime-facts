@@ -1,0 +1,6 @@
+const animeApp = {};
+
+animeApp.init = ()=>{
+
+};
+

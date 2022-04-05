@@ -7,3 +7,26 @@ section {
         margin: 10% 0;
     }
 }
+
+// results from the api 
+
+.results {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        flex: 20%;
+        border: 1px solid red;
+
+        // need the children of the list to also be a flex item
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h3 {
+        color: $solidBlack;
+    }
+    
+}

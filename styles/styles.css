@@ -484,6 +484,7 @@ section.intro {
       -ms-flex: 20%;
           flex: 20%;
   border: 1px solid red;
+  background-color: #1E90FF;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -495,10 +496,6 @@ section.intro {
       -ms-flex-align: center;
           align-items: center;
 }
-.results h3 {
-  color: #000;
-}
-
 footer {
   background-color: #1E90FF;
   color: #FFF;

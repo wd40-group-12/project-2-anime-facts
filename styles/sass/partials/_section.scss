@@ -18,6 +18,7 @@ section {
     li {
         flex: 20%;
         border: 1px solid red;
+        background-color: $primaryColorL;
 
         // need the children of the list to also be a flex item
         display: flex;
@@ -26,7 +27,7 @@ section {
     }
 
     h3 {
-        color: $solidBlack;
+        // color: $solidBlack;
     }
     
 }

@@ -502,6 +502,9 @@ section.intro {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.results li:hover {
+  background-color: #4169E1;
+}
 .results h3 {
   text-align: center;
 }

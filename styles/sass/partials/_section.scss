@@ -30,6 +30,10 @@ section {
         align-items: center;
         justify-content: space-between;
 
+        // hover effects 
+        &:hover{
+            background-color: $secondaryColorL;
+        }
     }
 
     h3 {

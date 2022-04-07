@@ -7,3 +7,41 @@ section {
         margin: 10% 0;
     }
 }
+
+// results from the api 
+
+.results {
+
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        flex: calc(25% - 20px);
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid $solidBlack;
+        border-radius: 15px;
+        background-color: $primaryColorL;
+        
+
+        // need the children of the list to also be a flex item
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+
+        // hover effects 
+        &:hover{
+            background-color: $secondaryColorL;
+        }
+    }
+
+    h3 {
+        text-align: center;
+    }
+    
+    img {
+        min-height: 350px;
+    }
+
+}

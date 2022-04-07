@@ -19,11 +19,11 @@ animeApp.getAnimeData = (userInput) => {
     .then((res) => res.json())
     .then((animeData) => {
         console.log(animeData);
-        displayElement(animeData.data);
+        animeApp.displayElement(animeData.data);
     })
 }
 
-const displayElement = (dataObjectFromApi) => {
+animeApp.displayElement = (dataObjectFromApi) => {
 
     dataObjectFromApi.forEach(anime => {
         // creating the li element

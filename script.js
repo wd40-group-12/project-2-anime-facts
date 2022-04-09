@@ -82,10 +82,20 @@ animeApp.animeInfo = () => {
     const selectedResult = document.querySelectorAll('.showMe');
     
     selectedResult.forEach(listItem => {
-        listItem.addEventListener('click', (event) => {
-        event.preventDefault();
-        console.log("i got clicked!");
-    })
+        listItem.addEventListener('click', function(event) {
+            event.preventDefault();
+            // this returns the entire list element that got clicked
+            const selectedIitem = this;
+
+            // for each to hide all the elements
+            selectedResult.forEach(li => {
+                li.classList.toggle('hideMe')
+            })
+
+            // then we turn on the one that got clicked agian
+            selectedIitem.classList.toggle('hideMe')
+            
+        })
     })
 
     

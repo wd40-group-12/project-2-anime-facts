@@ -302,6 +302,18 @@ html {
   background-color: #FFF;
 }
 
+#pageWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  min-height: 100vh;
+}
+
 .wrapper {
   max-width: 1260px;
   width: 90%;
@@ -513,15 +525,33 @@ section.intro {
 }
 .results img {
   min-height: 350px;
+  min-width: -webkit-fit-content;
+  min-width: -moz-fit-content;
+  min-width: fit-content;
+  border-radius: 20px;
+}
+
+.spacer {
+  height: 6rem;
+  width: 100%;
 }
 
 footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #1E90FF;
   color: #FFF;
   padding: 2% 0;
+  position: absolute;
+  bottom: 0;
   width: 100%;
+  height: 6rem;
 }
 footer .footerGridContainer {
+  position: relative;
+  align-self: center;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;

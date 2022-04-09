@@ -29,6 +29,10 @@ section {
         }
     }
 
+    .hideMe {
+        display: none;
+    }
+
     button {
         display: flex;
         flex-direction: column;

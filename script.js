@@ -25,6 +25,7 @@ animeApp.getAnimeData = (userInput) => {
     .then((animeData) => {
         console.log(animeData);
         animeApp.displayElement(animeData.data);
+        animeApp.animeInfo();
         // addSpacer() needs to be add at the bottom
         animeApp.addSpacer();
     })
@@ -69,6 +70,25 @@ animeApp.addSpacer = ()=>{
     const spacerElement = document.createElement('div');
     spacerElement.classList.add("spacer");
     document.querySelector(".results").appendChild(spacerElement);
+}
+
+animeApp.animeInfo = () => {
+
+    // add and event listern to the clicked element
+    // remove all the results from the page
+    // append to the selected result the anime plot
+    console.log("i am from the anime info");
+
+    const selectedResult = document.querySelectorAll('.showMe');
+    
+    selectedResult.forEach(listItem => {
+        listItem.addEventListener('click', (event) => {
+        event.preventDefault();
+        console.log("i got clicked!");
+    })
+    })
+
+    
 }
 
 animeApp.init = ()=>{

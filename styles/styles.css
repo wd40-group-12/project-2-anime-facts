@@ -504,6 +504,9 @@ section.intro {
 .results .showMe:hover {
   background-color: #4169E1;
 }
+.results .hideMe {
+  display: none;
+}
 .results button {
   display: -webkit-box;
   display: -ms-flexbox;

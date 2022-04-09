@@ -47,6 +47,8 @@ animeApp.displayElement = (dataObjectFromApi) => {
 
         // appending a element to the list element
         listElement.appendChild(buttonElement);
+        listElement.classList.add('hideMe');
+        
         // appending li elements to the ul
         document.querySelector('.results').appendChild(listElement);
     });

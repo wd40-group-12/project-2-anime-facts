@@ -29,8 +29,13 @@ section {
         }
     }
 
-    .hideMe {
+    .hideMe,
+    .hidePlot {
         display: none;
+    }
+
+    .showPlot {
+        display: block;
     }
 
     button {

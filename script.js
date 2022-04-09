@@ -43,6 +43,11 @@ animeApp.displayElement = (dataObjectFromApi) => {
         // creating the a element so we can toggle classes 
         const buttonElement = document.createElement('button');
 
+        // creating the plot element = hidden 
+        const plotElement = document.createElement('p')
+        plotElement.innerText = anime.synopsis;
+        plotElement.classList.add('hidePlot');
+
         // li needs to have an h3 for title, and image
         // creating the title/h3
         const titleElement = document.createElement('h3');
@@ -55,6 +60,7 @@ animeApp.displayElement = (dataObjectFromApi) => {
         // now need to append title and img to the a element
         buttonElement.appendChild(titleElement);
         buttonElement.appendChild(imageElement);
+        buttonElement.appendChild(plotElement);
 
         // appending a element to the list element
         listElement.appendChild(buttonElement);
@@ -86,19 +92,35 @@ animeApp.animeInfo = () => {
             event.preventDefault();
             // this returns the entire list element that got clicked
             const selectedIitem = this;
+            const plotInfo = document.querySelector('.showMe button p')
+            console.log(selectedIitem);
 
             // for each to hide all the elements
             selectedResult.forEach(li => {
                 li.classList.toggle('hideMe')
+                li.classList.toggle('showMe')
             })
 
             // then we turn on the one that got clicked agian
             selectedIitem.classList.toggle('hideMe')
+            selectedIitem.classList.toggle('showMe')
+
+                // if (selectedIitem.classList.value === 'showMe'){
+                //     plotInfo.classList.toggle('hidePlot');
+                //     plotInfo.classList.toggle('showPlot');
+                //     console.log("plot should be visible");
+                // }
+                // else
+                // {
+                //     plotInfo.classList.toggle('showPlot');
+                //     plotInfo.classList.toggle('hidePlot');
+                //     console.log("plot should be hidden");
+                // }
+                
+            
             
         })
-    })
-
-    
+    })   
 }
 
 animeApp.init = ()=>{

@@ -504,8 +504,12 @@ section.intro {
 .results .showMe:hover {
   background-color: #4169E1;
 }
-.results .hideMe {
+.results .hideMe,
+.results .hidePlot {
   display: none;
+}
+.results .showPlot {
+  display: block;
 }
 .results button {
   display: -webkit-box;

@@ -105,18 +105,8 @@ animeApp.animeInfo = () => {
             selectedIitem.classList.toggle('hideMe')
             selectedIitem.classList.toggle('showMe')
 
-                // if (selectedIitem.classList.value === 'showMe'){
-                //     plotInfo.classList.toggle('hidePlot');
-                //     plotInfo.classList.toggle('showPlot');
-                //     console.log("plot should be visible");
-                // }
-                // else
-                // {
-                //     plotInfo.classList.toggle('showPlot');
-                //     plotInfo.classList.toggle('hidePlot');
-                //     console.log("plot should be hidden");
-                // }
-                
+            selectedIitem.firstChild.children.item(2).classList.toggle('hidePlot');
+            selectedIitem.firstChild.children.item(2).classList.toggle('showPlot');
             
             
         })

@@ -488,6 +488,11 @@ section.intro {
   border: 3px solid #000;
   border-radius: 15px;
   background-color: #1E90FF;
+}
+.results li:hover {
+  background-color: #4169E1;
+}
+.results button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -501,9 +506,7 @@ section.intro {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-}
-.results li:hover {
-  background-color: #4169E1;
+  min-height: 100%;
 }
 .results h3 {
   text-align: center;

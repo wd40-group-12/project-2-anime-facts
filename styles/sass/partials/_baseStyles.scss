@@ -1,6 +1,12 @@
-
 html {
     background-color: $solidWhite;
+}
+
+#pageWrapper {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    min-height: 100vh;
 }
 
 .wrapper {

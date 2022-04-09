@@ -25,6 +25,7 @@ animeApp.getAnimeData = (userInput) => {
     .then((animeData) => {
         console.log(animeData);
         animeApp.displayElement(animeData.data);
+        animeApp.animeInfo();
         // addSpacer() needs to be add at the bottom
         animeApp.addSpacer();
     })
@@ -39,6 +40,14 @@ animeApp.displayElement = (dataObjectFromApi) => {
         // creating the li element
         const listElement = document.createElement('li')
 
+        // creating the a element so we can toggle classes 
+        const buttonElement = document.createElement('button');
+
+        // creating the plot element = hidden 
+        const plotElement = document.createElement('p')
+        plotElement.innerText = anime.synopsis;
+        plotElement.classList.add('hidePlot');
+
         // li needs to have an h3 for title, and image
         // creating the title/h3
         const titleElement = document.createElement('h3');
@@ -48,9 +57,14 @@ animeApp.displayElement = (dataObjectFromApi) => {
         imageElement.src = anime.images.jpg.image_url;
         imageElement.alt =  `image of  ${anime.title}`;
 
-        // now need to append title and img to the li element
-        listElement.appendChild(titleElement);
-        listElement.appendChild(imageElement);
+        // now need to append title and img to the a element
+        buttonElement.appendChild(titleElement);
+        buttonElement.appendChild(imageElement);
+        buttonElement.appendChild(plotElement);
+
+        // appending a element to the list element
+        listElement.appendChild(buttonElement);
+        listElement.classList.add('showMe');
 
         // appending li elements to the ul
         document.querySelector('.results').appendChild(listElement);
@@ -62,6 +76,41 @@ animeApp.addSpacer = ()=>{
     const spacerElement = document.createElement('div');
     spacerElement.classList.add("spacer");
     document.querySelector(".results").appendChild(spacerElement);
+}
+
+animeApp.animeInfo = () => {
+
+    // add and event listern to the clicked element
+    // remove all the results from the page
+    // append to the selected result the anime plot
+    console.log("i am from the anime info");
+
+    const selectedResult = document.querySelectorAll('.showMe');
+    
+    selectedResult.forEach(listItem => {
+        listItem.addEventListener('click', function(event) {
+            event.preventDefault();
+            // this returns the entire list element that got clicked
+            const selectedIitem = this;
+            const plotInfo = document.querySelector('.showMe button p')
+            console.log(selectedIitem);
+
+            // for each to hide all the elements
+            selectedResult.forEach(li => {
+                li.classList.toggle('hideMe')
+                li.classList.toggle('showMe')
+            })
+
+            // then we turn on the one that got clicked agian
+            selectedIitem.classList.toggle('hideMe')
+            selectedIitem.classList.toggle('showMe')
+
+            selectedIitem.firstChild.children.item(2).classList.toggle('hidePlot');
+            selectedIitem.firstChild.children.item(2).classList.toggle('showPlot');
+            
+            
+        })
+    })   
 }
 
 animeApp.init = ()=>{

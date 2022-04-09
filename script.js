@@ -29,6 +29,9 @@ animeApp.displayElement = (dataObjectFromApi) => {
         // creating the li element
         const listElement = document.createElement('li')
 
+        // creating the a element so we can toggle classes 
+        const buttonElement = document.createElement('button');
+
         // li needs to have an h3 for title, and image
         // creating the title/h3
         const titleElement = document.createElement('h3');
@@ -38,10 +41,12 @@ animeApp.displayElement = (dataObjectFromApi) => {
         imageElement.src = anime.images.jpg.image_url;
         imageElement.alt =  `image of  ${anime.title}` ;
 
-        // now need to append title and img to the li element
-        listElement.appendChild(titleElement);
-        listElement.appendChild(imageElement);
+        // now need to append title and img to the a element
+        buttonElement.appendChild(titleElement);
+        buttonElement.appendChild(imageElement);
 
+        // appending a element to the list element
+        listElement.appendChild(buttonElement);
         // appending li elements to the ul
         document.querySelector('.results').appendChild(listElement);
     });

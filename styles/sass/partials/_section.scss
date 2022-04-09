@@ -23,7 +23,6 @@ section {
         border-radius: 15px;
         background-color: $primaryColorL;
         
-
         // need the children of the list to also be a flex item
         display: flex;
         flex-direction: column;
@@ -42,6 +41,13 @@ section {
     
     img {
         min-height: 350px;
+        min-width: fit-content;
+        border-radius: 20px;
     }
 
+}
+
+.spacer {
+    height: 6rem; // The same height of the footer element
+    width: 100%;
 }

@@ -479,7 +479,7 @@ section.intro {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-.results li {
+.results .showMe {
   -webkit-box-flex: calc(25% - 20px);
       -ms-flex: calc(25% - 20px);
           flex: calc(25% - 20px);
@@ -489,7 +489,7 @@ section.intro {
   border-radius: 15px;
   background-color: #1E90FF;
 }
-.results li:hover {
+.results .showMe:hover {
   background-color: #4169E1;
 }
 .results button {

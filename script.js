@@ -47,12 +47,14 @@ animeApp.displayElement = (dataObjectFromApi) => {
 
         // appending a element to the list element
         listElement.appendChild(buttonElement);
-        listElement.classList.add('hideMe');
-        
+        listElement.classList.add('showMe');
+
         // appending li elements to the ul
         document.querySelector('.results').appendChild(listElement);
     });
 }
+
+
 
 animeApp.init = ()=>{
     animeApp.sendInput();

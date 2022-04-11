@@ -598,3 +598,17 @@ footer .footerGridContainer .gridItem {
     max-width: none;
   }
 }
+@media (max-width: 425px) {
+  form {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  button.searchButton {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+  }
+}

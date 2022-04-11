@@ -14,5 +14,13 @@
 }
 
 @media (max-width: 550px) {
-    
+    header {
+        .headerFlexContainer {
+            flex-direction: column;
+            nav {
+                width: 80vw;
+                max-width: none;
+            }
+        }
+    }
 }

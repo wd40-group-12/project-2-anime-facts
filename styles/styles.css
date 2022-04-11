@@ -542,7 +542,7 @@ section.intro {
 }
 
 main {
-  min-height: 79.5vh;
+  min-height: 75.5vh;
 }
 
 footer {
@@ -553,7 +553,6 @@ footer {
   color: #FFF;
   padding: 2% 0;
   width: 100%;
-  height: 6rem;
 }
 footer .footerGridContainer {
   position: relative;
@@ -585,5 +584,17 @@ footer .footerGridContainer .gridItem {
   }
   footer .footerGridContainer .gridItem3 {
     grid-area: 3/1/4/-1;
+  }
+}
+@media (max-width: 550px) {
+  header .headerFlexContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  header .headerFlexContainer nav {
+    width: 80vw;
+    max-width: none;
   }
 }

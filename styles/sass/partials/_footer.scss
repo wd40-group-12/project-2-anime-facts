@@ -4,8 +4,8 @@ footer {
     color: $solidWhite;
     padding: 2% 0;
     // Footer stay absolute to the pageWrapper div (in baseStyles) which has a min-height : 100vh. The combined effects allow footer to stay fixed at the bottom regardless of the page height.
-    position: absolute;
-    bottom: 0;
+    // position: absolute;
+    // bottom: 0;
     width: 100%;
     height: 6rem;
     .footerGridContainer {

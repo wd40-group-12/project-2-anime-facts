@@ -501,9 +501,6 @@ section.intro {
   border-radius: 15px;
   background-color: #1E90FF;
 }
-.results .showMe:hover {
-  background-color: #4169E1;
-}
 .results .hideMe,
 .results .hidePlot {
   display: none;
@@ -544,6 +541,10 @@ section.intro {
   width: 100%;
 }
 
+main {
+  min-height: 79.5vh;
+}
+
 footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -551,8 +552,6 @@ footer {
   background-color: #1E90FF;
   color: #FFF;
   padding: 2% 0;
-  position: absolute;
-  bottom: 0;
   width: 100%;
   height: 6rem;
 }

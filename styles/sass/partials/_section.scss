@@ -22,11 +22,6 @@ section {
         border: 3px solid $solidBlack;
         border-radius: 15px;
         background-color: $primaryColorL;
-
-        // hover effects 
-        &:hover{
-            background-color: $secondaryColorL;
-        }
     }
 
     .hideMe,
@@ -62,4 +57,8 @@ section {
 .spacer {
     height: 6rem; // The same height of the footer element
     width: 100%;
+}
+
+main {
+    min-height: 79.5vh;
 }

@@ -4,6 +4,7 @@ footer {
     color: $solidWhite;
     padding: 2% 0;
     width: 100%;
+    min-height: 15vh;
     .footerGridContainer {
         position: relative;
         // Fix gap at the bottom of footer on wide screen

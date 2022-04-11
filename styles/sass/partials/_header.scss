@@ -1,6 +1,7 @@
 header {
     background-color: $primaryColorL;
     color: $solidWhite;
+    min-height: 8vh;
     .headerFlexContainer {
         display: flex;
         justify-content: space-between;

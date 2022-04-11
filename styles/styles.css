@@ -421,6 +421,7 @@ a.developer:hover, a.developer:focus {
 header {
   background-color: #1E90FF;
   color: #FFF;
+  min-height: 8vh;
 }
 header .headerFlexContainer {
   display: -webkit-box;
@@ -542,7 +543,7 @@ section.intro {
 }
 
 main {
-  min-height: 75.5vh;
+  min-height: 77vh;
 }
 
 footer {
@@ -553,6 +554,7 @@ footer {
   color: #FFF;
   padding: 2% 0;
   width: 100%;
+  min-height: 15vh;
 }
 footer .footerGridContainer {
   position: relative;

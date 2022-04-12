@@ -1,6 +1,8 @@
 header {
     background-color: var(--primaryColor);
     color: var(--quaternaryColor);
+    min-height: 8vh;
+
     .headerFlexContainer {
         display: flex;
         justify-content: space-between;

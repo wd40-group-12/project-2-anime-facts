@@ -31,6 +31,7 @@ section {
         &:hover{
             background-color: var(--secondaryColor);
         }
+
     }
 
     .hideMe,
@@ -66,4 +67,8 @@ section {
 .spacer {
     height: 6rem; // The same height of the footer element
     width: 100%;
+}
+
+main {
+    min-height: 77vh;
 }

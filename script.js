@@ -25,7 +25,7 @@ animeApp.getAnimeData = (userInput) => {
     fetch(url)
     .then((res) => res.json())
     .then((animeData) => {
-        console.log(animeData);
+        // console.log(animeData);
         animeApp.displayElement(animeData.data);
         animeApp.animeInfo();
         // addSpacer() needs to be add at the bottom
@@ -85,16 +85,14 @@ animeApp.animeInfo = () => {
     // add and event listern to the clicked element
     // remove all the results from the page
     // append to the selected result the anime plot
-    console.log("i am from the anime info");
-
     const selectedResult = document.querySelectorAll('.showMe');
     
     selectedResult.forEach(listItem => {
         listItem.addEventListener('click', function(event) {
             event.preventDefault();
             // this returns the entire list element that got clicked
-            const selectedIitem = this;
-            console.log(selectedIitem);
+            const selectedItem = this;
+            // console.log(selectedItem);
 
             // for each to hide all the elements
             selectedResult.forEach(li => {
@@ -103,13 +101,11 @@ animeApp.animeInfo = () => {
             })
 
             // then we turn on the one that got clicked agian
-            selectedIitem.classList.toggle('hideMe')
-            selectedIitem.classList.toggle('showMe')
+            selectedItem.classList.toggle('hideMe')
+            selectedItem.classList.toggle('showMe')
 
-            selectedIitem.firstChild.children.item(2).classList.toggle('hidePlot');
-            selectedIitem.firstChild.children.item(2).classList.toggle('showPlot');
-            
-            
+            selectedItem.firstChild.children.item(2).classList.toggle('hidePlot');
+            selectedItem.firstChild.children.item(2).classList.toggle('showPlot');
         })
     })   
 }
@@ -120,7 +116,6 @@ animeApp.toggleTheme = ()=>{
         document.body.classList.toggle("darkTheme");
     })
 }
-
 
 animeApp.init = ()=>{
     animeApp.sendInput();

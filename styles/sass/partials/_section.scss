@@ -23,7 +23,7 @@ section {
         flex: calc(25% - 20px);
         padding: 10px;
         margin: 10px;
-        border: 3px solid $solidBlack;
+        border: 3px solid var(--tertiaryColor);
         border-radius: 15px;
         background-color: var(--primaryColor);
 
@@ -31,7 +31,6 @@ section {
         &:hover{
             background-color: var(--secondaryColor);
         }
-
     }
 
     .hideMe,
@@ -41,6 +40,11 @@ section {
 
     .showPlot {
         display: block;
+        font-family: $bodyFont, sans-serif;
+        font-size: 1rem;
+        letter-spacing: 0.15rem;
+        line-height: 1.25rem;
+        margin-top: 10px;
     }
 
     button {

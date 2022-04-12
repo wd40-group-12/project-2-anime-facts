@@ -53,3 +53,9 @@ button {
         min-height: 51px;
     } 
 }
+
+ul {
+    &.results {
+        padding: 0;
+    }
+}

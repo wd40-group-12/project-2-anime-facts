@@ -1,6 +1,6 @@
 header {
-    background-color: $primaryColorL;
-    color: $solidWhite;
+    background-color: var(--primaryColor);
+    color: var(--quaternaryColor);
     .headerFlexContainer {
         display: flex;
         justify-content: space-between;

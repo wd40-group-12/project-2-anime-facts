@@ -1,3 +1,7 @@
+main {
+    background-color: var(--quaternaryColor);
+}
+
 section {
     &.intro {
         display: flex;
@@ -21,11 +25,11 @@ section {
         margin: 10px;
         border: 3px solid $solidBlack;
         border-radius: 15px;
-        background-color: $primaryColorL;
+        background-color: var(--primaryColor);
 
         // hover effects 
         &:hover{
-            background-color: $secondaryColorL;
+            background-color: var(--secondaryColor);
         }
     }
 

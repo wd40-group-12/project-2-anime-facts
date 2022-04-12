@@ -114,8 +114,17 @@ animeApp.animeInfo = () => {
     })   
 }
 
+animeApp.toggleTheme = ()=>{
+    const toggleElement = document.querySelector(".themeToggle");
+    toggleElement.addEventListener("click", (e)=>{
+        document.body.classList.toggle("darkTheme");
+    })
+}
+
+
 animeApp.init = ()=>{
     animeApp.sendInput();
+    animeApp.toggleTheme();
 };
 
 animeApp.init();

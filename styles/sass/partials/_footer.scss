@@ -1,7 +1,7 @@
 footer {
     display: flex;
-    background-color: $primaryColorL;
-    color: $solidWhite;
+    background-color: var(--primaryColor);
+    color: var(--quaternaryColor);
     padding: 2% 0;
     // Footer stay absolute to the pageWrapper div (in baseStyles) which has a min-height : 100vh. The combined effects allow footer to stay fixed at the bottom regardless of the page height.
     position: absolute;

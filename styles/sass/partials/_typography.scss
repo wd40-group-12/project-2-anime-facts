@@ -7,13 +7,13 @@ html {
 body {
     font-family: $bodyFont, sans-serif;
     font-size: 1rem;
-    color: $solidBlack;
+    color: var(--tertiaryColor);
 }
 
 h1, h2, h3, h4 {
     font-family: $headingFont, sans-serif;
     font-weight: normal;
-    color: $solidBlack;
+    color: var(--tertiaryColor);
     margin: 0;
 }
 
@@ -28,7 +28,7 @@ h2 {
 
 h3 {
     font-family: $emphasizeFont, sans-serif;
-    color: $solidWhite;
+    color: var(--quaternaryColor);
     letter-spacing: 0.2rem;
 }
 
@@ -61,7 +61,7 @@ a {
         &:hover,
         &:focus {
             display: inline-block;
-            color: $solidBlack;
+            color: var(--tertiaryColor);
             transform: translateY(-0.25rem);
         }
     }

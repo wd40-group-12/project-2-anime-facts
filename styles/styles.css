@@ -311,7 +311,7 @@ input, button, textarea, select {
   --quaternaryColor: #000;
 }
 
-#pageWrapper {
+.pageWrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

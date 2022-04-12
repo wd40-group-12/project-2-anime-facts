@@ -15,10 +15,8 @@ section {
 // results from the api 
 
 .results {
-
     display: flex;
     flex-wrap: wrap;
-
     .showMe {
         flex: calc(25% - 20px);
         padding: 10px;
@@ -26,18 +24,14 @@ section {
         border: 3px solid var(--tertiaryColor);
         border-radius: 15px;
         background-color: var(--primaryColor);
-
-        // hover effects 
         &:hover{
             background-color: var(--secondaryColor);
         }
     }
-
     .hideMe,
     .hidePlot {
         display: none;
     }
-
     .showPlot {
         display: block;
         font-family: $bodyFont, sans-serif;
@@ -46,7 +40,6 @@ section {
         line-height: 1.25rem;
         margin-top: 10px;
     }
-
     button {
         display: flex;
         flex-direction: column;
@@ -55,17 +48,14 @@ section {
         min-height: 100%;
         min-width: 100%;
     }
-
     h3 {
         text-align: center;
     }
-    
     img {
         min-height: 350px;
         min-width: fit-content;
         border-radius: 20px;
     }
-
 }
 
 .spacer {

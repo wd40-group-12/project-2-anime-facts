@@ -1,4 +1,10 @@
 // Colours:
+// // Light theme (default)
+// // dogerBlue
+// // royalBlue
+// // Dark theme
+// // lightOrange
+// //halfLifeOrange
 // Notes: primary colour is set to be lighter than secondary colour
 // reference: https://developer.mozilla.org/en-US/docs/Web/CSS/var
 
@@ -15,20 +21,6 @@
     --tertiaryColor: #FFF;
     --quaternaryColor: #000;
 }
-
-// // Light theme (default)
-// // dogerBlue
-// $primaryColorL: #1E90FF;
-// // royalBlue
-// $secondaryColorL: #4169E1;
-// // Dark theme
-// // lightOrange
-// $primaryColorD: #e7930b;
-// //halfLifeOrange
-// $secondaryColorD: #fb7f0c;
-// // Tones
-// $solidWhite: #FFF;
-// $solidBlack: #000;
 
 // Site fonts:
 $headingFont: "Lato"; // font-family: 'Lato', sans-serif;

@@ -1,8 +1,4 @@
-// html {
-//     background-color: var(--quaternaryColor);
-// }
-
-#pageWrapper {
+.pageWrapper {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -26,11 +22,9 @@ button {
     border-radius: 10px;
     // effect
     cursor: pointer;
-    background-color: var(--primaryColor);
-    
+    background-color: var(--primaryColor);  
     // animations 
     transition: 0.3s;
-
     &:hover,
     &:focus {
         background-color: var(--secondaryColor);

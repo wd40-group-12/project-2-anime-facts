@@ -1,5 +1,7 @@
 const animeApp = {};
 
+const animeApp_errorMessage = "It appears that the API can not handle that request at this moment. Please check your spelling or try another term."
+
 animeApp.sendInput = ()=>{
     document.querySelector("form").addEventListener( "submit", e => {
         e.preventDefault();
@@ -23,13 +25,26 @@ animeApp.getAnimeData = (userInput) => {
         limit: 12,
     })
     fetch(url)
-    .then((res) => res.json())
+    .then((res) => {
+        // error handling for fetch response
+            if (!res.ok) {
+                throw new Error(`Request error. Status: ${res.status}`);
+            } else {
+                return res.json();
+            }
+        })
     .then((animeData) => {
         // console.log(animeData);
+        if (animeData.data.length > 0) {
         animeApp.displayElement(animeData.data);
         animeApp.animeInfo();
         // addSpacer() needs to be add at the bottom
         animeApp.addSpacer();
+        } else {
+            // error handling for API query shortcoming
+            animeApp.errorDisplay();
+            throw new Error("The API can't query this result. Note: Jika V4 is having trouble with certain English names and loose words are not indexed. Current issue: https://github.com/jikan-me/jikan-rest/issues/189");
+        }
     })
 }
 
@@ -71,6 +86,14 @@ animeApp.displayElement = (dataObjectFromApi) => {
         // appending li elements to the ul
         document.querySelector('.results').appendChild(listElement);
     });
+}
+
+animeApp.errorDisplay = ()=>{
+    const resultElement = document.querySelector(".results");
+    resultElement.innerHTML = "";
+    const errorMsgElement = document.createElement('p')
+    errorMsgElement.innerText = animeApp_errorMessage;
+    document.querySelector('.results').appendChild(errorMsgElement);
 }
 
 // Add a spacer to provide a height foot print to seperate the result section from the footer section

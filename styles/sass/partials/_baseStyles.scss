@@ -1,6 +1,6 @@
-html {
-    background-color: $solidWhite;
-}
+// html {
+//     background-color: var(--quaternaryColor);
+// }
 
 #pageWrapper {
     display: flex;
@@ -20,28 +20,28 @@ button {
     // button text styling
     font-family: $emphasizeFont, sans-serif;
     font-size: 1rem;
-    color: $solidWhite;
+    color: var(--quaternaryColor);
     // button dim and border
     border: none;
     border-radius: 10px;
     // effect
     cursor: pointer;
-    background-color: $primaryColorL;
+    background-color: var(--primaryColor);
     
     // animations 
     transition: 0.3s;
 
     &:hover,
     &:focus {
-        background-color: $secondaryColorL;
+        background-color: var(--secondaryColor);
     }
     &.themeToggle {
         letter-spacing: 0.2rem;
         padding: 0 10px 0 10px;
         &:hover,
         &:focus {
-            color: $solidBlack;
-            background-color: $primaryColorD;
+            color: var(--tertiaryColor);
+            background-color: var(--primaryColor);
         }
     }
     &.searchButton {

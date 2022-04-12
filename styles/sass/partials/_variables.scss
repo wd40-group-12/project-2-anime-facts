@@ -7,6 +7,22 @@ $primaryColorL: #1E90FF;
 // royalBlue
 $secondaryColorL: #4169E1;
 
+// reference: https://developer.mozilla.org/en-US/docs/Web/CSS/var
+
+:root {
+    --primaryColor: #1E90FF;
+    --secondaryColor: #4169E1;
+    --tertiaryColor: #000;
+    --quaternaryColor: #FFF;
+}
+
+.darkTheme {
+    --primaryColor: #e7930b;
+    --secondaryColor: #fb7f0c;
+    --tertiaryColor: #FFF;
+    --quaternaryColor: #000;
+}
+
 // Dark theme
 // lightOrange
 $primaryColorD: #e7930b;

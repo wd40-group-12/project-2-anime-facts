@@ -1,7 +1,7 @@
 footer {
     display: flex;
-    background-color: $primaryColorL;
-    color: $solidWhite;
+    background-color: var(--primaryColor);
+    color: var(--quaternaryColor);
     padding: 2% 0;
     width: 100%;
     min-height: 15vh;

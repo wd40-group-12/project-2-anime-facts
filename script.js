@@ -12,9 +12,11 @@ animeApp.sendInput = ()=>{
 animeApp.getAnimeData = (userInput) => {
     const url = new URL(`https://api.jikan.moe/v4/anime`)
     url.search = new URLSearchParams({
-        letter: userInput.trim().toString(),
-        // q doesn't work with order_by or sort
-        order_by: "popularity",
+        q: userInput.trim().toString(),
+        // Temporary workaround to show the most relevant anime titles as of April 2022. Reason: order_by: "popularity" is not accurate.
+        // order_by: "poplarity",
+        // order_by: "favorites",
+        order_by: "rank",
         sort: "asc",
         // Remove NSFW materials Note: sfw param not working w/ q
         genres_exclude: 12,
@@ -92,7 +94,6 @@ animeApp.animeInfo = () => {
             event.preventDefault();
             // this returns the entire list element that got clicked
             const selectedIitem = this;
-            const plotInfo = document.querySelector('.showMe button p')
             console.log(selectedIitem);
 
             // for each to hide all the elements
@@ -113,8 +114,17 @@ animeApp.animeInfo = () => {
     })   
 }
 
+animeApp.toggleTheme = ()=>{
+    const toggleElement = document.querySelector(".themeToggle");
+    toggleElement.addEventListener("click", (e)=>{
+        document.body.classList.toggle("darkTheme");
+    })
+}
+
+
 animeApp.init = ()=>{
     animeApp.sendInput();
+    animeApp.toggleTheme();
 };
 
 animeApp.init();
